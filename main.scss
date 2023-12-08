@@ -1476,7 +1476,7 @@ section .heading {
 }
 
 .skillOverviews {
-  margin-top: 4rem;
+  margin-top: 6rem;
   margin-bottom: 6rem;
 
   .container {
@@ -2039,6 +2039,57 @@ section .heading {
             border-radius: 3rem;
           }
         }
+      }
+    }
+  }
+}
+
+.courseDetails-table {
+  margin-top: 4rem;
+  .container {
+    margin-top: 2rem;
+
+    @include breakpoints(mdMax) {
+      overflow: hidden;
+      overflow-x: scroll;
+
+      table{
+        td,th{
+          white-space: nowrap;
+        }
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 0.4rem;
+
+      .primaryBtn {
+        white-space: nowrap;
+        max-width: max-content;
+      }
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 1rem;
+      }
+
+      td {
+        padding: 2rem 1rem;
+      }
+
+      tr:nth-child(01) {
+        background-color: var(--blue-300) !important;
+        color: #fff;
+        th {
+          font-weight: 500 !important;
+        }
+      }
+
+      tr:nth-child(odd) {
+        background-color: var(--blue-50);
       }
     }
   }

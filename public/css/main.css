@@ -1127,7 +1127,7 @@ section .heading h2 span {
 }
 
 .skillOverviews {
-  margin-top: 4rem;
+  margin-top: 6rem;
   margin-bottom: 6rem;
 }
 .skillOverviews .container {
@@ -1608,4 +1608,48 @@ section .heading h2 span {
   padding: 2px 0.5rem;
   font-size: var(--fs-12);
   border-radius: 3rem;
+}
+
+.courseDetails-table {
+  margin-top: 4rem;
+}
+.courseDetails-table .container {
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .courseDetails-table .container {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .courseDetails-table .container table td, .courseDetails-table .container table th {
+    white-space: nowrap;
+  }
+}
+.courseDetails-table .container table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+.courseDetails-table .container table .primaryBtn {
+  white-space: nowrap;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.courseDetails-table .container table td,
+.courseDetails-table .container table th {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+.courseDetails-table .container table td {
+  padding: 2rem 1rem;
+}
+.courseDetails-table .container table tr:nth-child(01) {
+  background-color: var(--blue-300) !important;
+  color: #fff;
+}
+.courseDetails-table .container table tr:nth-child(01) th {
+  font-weight: 500 !important;
+}
+.courseDetails-table .container table tr:nth-child(odd) {
+  background-color: var(--blue-50);
 }/*# sourceMappingURL=main.css.map */
