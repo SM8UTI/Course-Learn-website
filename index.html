@@ -22,7 +22,7 @@
     <header class="sticky-header">
         <div class="Wrapper">
             <img src="./assets/logo/logo-text.png" alt="logo" id="logo" style="width: 170px;">
-            <nav>
+            <nav id="nav" class="nav">
                 <ul>
                     <li>
                         <a href="#" style="font-weight: 500;">Home</a>
@@ -30,9 +30,58 @@
                     <li>
                         <a href="#" style="font-weight: 500;">About</a>
                     </li>
-                    <li style="font-weight: 500;">
-                        Courses
+                    <li style="position: relative;" onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+                        <a href="#"
+                            style="font-weight: 500;display: flex;flex-direction: row;align-items: center;cursor: pointer;gap: .2rem;"
+                            class="subMenu-trigger">
+                            Courses
+                            <div class="ico" style="font-size: 0.7rem;margin-top: 3px;">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </a>
+
+                        <div class="subMenu" id="subMenu">
+                            <div class="container">
+                                <div class="left">
+                                    <h4>
+                                        Popular Courses
+                                    </h4>
+                                    <ul>
+                                        <li>
+                                            <div class="image">
+                                                <img src="./assets/course/course-1.jpg" alt="course image">
+                                            </div>
+                                            <a href="./cyber-security.html">
+                                                Post Graduate Program in Cyber Security
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="image">
+                                                <img src="./assets/course/course-1.jpg" alt="course image">
+                                            </div>
+                                            <a href="./cyber-security.html">
+                                                Post Graduate Program in Cyber Security
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right">
+                                    <h4>
+                                        Courses
+                                    </h4>
+                                    <ul>
+                                        <li><a href="./cyber-security.html">Java Fullstack</a></li>
+                                        <li><a href="./cyber-security.html">Cyber Security</a></li>
+                                        <li><a href="./cyber-security.html">Data Science & Machine Learning</a></li>
+                                        <li><a href="./cyber-security.html">Devops with AWS</a></li>
+                                        <li><a href="./cyber-security.html">Data Anyalytics</a></li>
+                                        <li><a href="./cyber-security.html">Excel Beginner to Advanced</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+
                 </ul>
             </nav>
 
@@ -67,7 +116,7 @@
                         Sign up
                     </a>
                 </div>
-                <div class="hamBurger">
+                <div class="hamBurger" onclick="navToggle()" id="hamBurger">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -342,6 +391,288 @@
                         <h4>
                             Master Certification Program On Game Development And AR/VR
                         </h4>
+                        <ul class="table">
+                            <li>
+
+                                <span>
+                                    8 live Classes
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    12 Projects
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <div class="hr"></div>
+                        <div class="price">
+                            <span>
+                                Fees: amount
+                            </span>
+                            <div class="price-discount">
+                                <h2>
+                                    Rs. 69,990
+                                </h2>
+                                <span>
+                                    Rs. 142,990
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btns-groups">
+                            <a href="#" class="secondaryBtn">
+                                <div class="ico">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <span>
+                                    Syllabus
+                                </span>
+                            </a>
+                            <a href="#" class="primaryBtn">
+                                <div class="ico">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <span>
+                                    Enroll now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CourseCard">
+                    <div class="image">
+                        <img src="./assets/course/course-1.jpg" alt="course">
+                    </div>
+                    <div class="text">
+                        <h4>
+                            Master Certification Program On Game Development And AR/VR
+                        </h4>
+                        <ul class="table">
+                            <li>
+
+                                <span>
+                                    8 live Classes
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    12 Projects
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <div class="hr"></div>
+                        <div class="price">
+                            <span>
+                                Fees: amount
+                            </span>
+                            <div class="price-discount">
+                                <h2>
+                                    Rs. 69,990
+                                </h2>
+                                <span>
+                                    Rs. 142,990
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btns-groups">
+                            <a href="#" class="secondaryBtn">
+                                <div class="ico">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <span>
+                                    Syllabus
+                                </span>
+                            </a>
+                            <a href="#" class="primaryBtn">
+                                <div class="ico">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <span>
+                                    Enroll now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CourseCard">
+                    <div class="image">
+                        <img src="./assets/course/course-1.jpg" alt="course">
+                    </div>
+                    <div class="text">
+                        <h4>
+                            Master Certification Program On Game Development And AR/VR
+                        </h4>
+                        <ul class="table">
+                            <li>
+
+                                <span>
+                                    8 live Classes
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    12 Projects
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <div class="hr"></div>
+                        <div class="price">
+                            <span>
+                                Fees: amount
+                            </span>
+                            <div class="price-discount">
+                                <h2>
+                                    Rs. 69,990
+                                </h2>
+                                <span>
+                                    Rs. 142,990
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btns-groups">
+                            <a href="#" class="secondaryBtn">
+                                <div class="ico">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <span>
+                                    Syllabus
+                                </span>
+                            </a>
+                            <a href="#" class="primaryBtn">
+                                <div class="ico">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <span>
+                                    Enroll now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CourseCard">
+                    <div class="image">
+                        <img src="./assets/course/course-1.jpg" alt="course">
+                    </div>
+                    <div class="text">
+                        <h4>
+                            Master Certification Program On Game Development And AR/VR
+                        </h4>
+                        <ul class="table">
+                            <li>
+
+                                <span>
+                                    8 live Classes
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    12 Projects
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                            <li>
+
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <div class="hr"></div>
+                        <div class="price">
+                            <span>
+                                Fees: amount
+                            </span>
+                            <div class="price-discount">
+                                <h2>
+                                    Rs. 69,990
+                                </h2>
+                                <span>
+                                    Rs. 142,990
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btns-groups">
+                            <a href="#" class="secondaryBtn">
+                                <div class="ico">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <span>
+                                    Syllabus
+                                </span>
+                            </a>
+                            <a href="#" class="primaryBtn">
+                                <div class="ico">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <span>
+                                    Enroll now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container Wrapper">
+                <div class="CourseCard">
+                    <div class="image">
+                        <img src="./assets/course/course-1.jpg" alt="course">
+                    </div>
+                    <div class="text">
+                        <h4>
+                            Master Certification Program On Game Development And AR/VR
+                        </h4>
                         <ul>
                             <li>
                                 <div class="ico">
@@ -390,7 +721,7 @@
                                     <i class="fa-regular fa-file-lines"></i>
                                 </div>
                                 <span>
-                                    View Syllabus
+                                    Syllabus
                                 </span>
                             </a>
                             <a href="#" class="primaryBtn">
@@ -460,7 +791,7 @@
                                     <i class="fa-regular fa-file-lines"></i>
                                 </div>
                                 <span>
-                                    View Syllabus
+                                    Syllabus
                                 </span>
                             </a>
                             <a href="#" class="primaryBtn">
@@ -531,7 +862,77 @@
                                     <i class="fa-regular fa-file-lines"></i>
                                 </div>
                                 <span>
-                                    View Syllabus
+                                    Syllabus
+                                </span>
+                            </a>
+                            <a href="#" class="primaryBtn">
+                                <div class="ico">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <span>
+                                    Enroll now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CourseCard">
+                    <div class="image">
+                        <img src="./assets/course/course-1.jpg" alt="course">
+                    </div>
+                    <div class="text">
+                        <h4>
+                            Master Certification Program On Game Development And AR/VR
+                        </h4>
+                        <ul>
+                            <li>
+                                <div class="ico">
+                                    <img src="./assets/courseCard-video.png" alt="video">
+                                </div>
+                                <span>
+                                    8 live Classes
+                                </span>
+                            </li>
+                            <li>
+                                <div class="ico">
+                                    <img src="./assets/courseCard-projects.png" alt="projects" />
+                                </div>
+                                <span>
+                                    12 Projects
+                                </span>
+                            </li>
+                            <li>
+                                <div class=" ico">
+                                    <img src="./assets/courseCard-time.png" alt="time">
+                                </div>
+                                <span>
+                                    20 hr/week
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <div class="hr"></div>
+                        <div class="price">
+                            <span>
+                                Fees: Starting From
+                            </span>
+                            <div class="price-discount">
+                                <h2>
+                                    Rs. 69,990
+                                </h2>
+                                <span>
+                                    Rs. 42,990
+                                </span>
+                            </div>
+                        </div>
+                        <div class="btns-groups">
+                            <a href="#" class="secondaryBtn">
+                                <div class="ico">
+                                    <i class="fa-regular fa-file-lines"></i>
+                                </div>
+                                <span>
+                                    Syllabus
                                 </span>
                             </a>
                             <a href="#" class="primaryBtn">
@@ -546,6 +947,7 @@
                     </div>
                 </div>
             </div>
+
             <div style="margin-top: 6rem" class="Wrapper courseListBanner">
                 <div
                     style="width: 100%;margin-inline: auto; border-radius: 12rem;border: 1px solid var(--black);padding:1rem;display: flex;flex-direction: row;justify-content: space-between;align-items: center;max-width: 900px;">
@@ -837,23 +1239,194 @@
 
     </main>
 
-    <!-- <footer>
+    <footer>
         <div class="container Wrapper">
-            <div class="containerLinks">
-                <div class="about">
-                    <img src="./assets/logo/footer-logo.png" alt="logo" class="logo">
-                    <p>
-                        Great lesson ideas and lesson plans for ESL teachers! Educators can customize lessons as best
-                        plans to knowledge.
-                    </p>
+            <div class="company">
+                <img src="./assets/logo/footer-logo.png" alt="logo" class="logo">
+                <p>
+                    Great lesson ideas and lesson plans for ESL teachers! Educators can customize lessons as best
+                    plans to knowledge.
+                </p>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
                 </div>
             </div>
+            <div class="list list-1">
+                <h4>
+                    Online Platform
+                </h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Proper Guidelines
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Digital Library
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Compare Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Build Career
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Become Instructor
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-2">
+                <h4>
+                    Browse Courses
+                </h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Java Fullstack
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Mern Stack
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Mean Stack
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Python Fullstack
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Data Structure & Algorithm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Data Sceience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Data Analyst
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Devops Engineer
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-3">
+                <h4>
+                    Insight Community
+                </h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Global Partners
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Forum
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Community
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Documentation
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer> -->
+        <div class="container-2 Wrapper">
+            <ul>
+                <li>
+                    © 2023 Geeknomix. All rights reserved powerd by Omnichex Intelligence.
+                </li>
+                <li>
+                    <img src="./assets/icon/calling.png" alt="calling" class="ico">
+                    <div>
+                        <span>
+                            Have a question? Call us 24/7
+                        </span>
+                        <h5>
+                            +91-9090-66-2020
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/icon/email-icon.png" alt="email" class="ico">
+                    <div>
+                        <span>
+                            Have a question? Mail us
+                        </span>
+                        <h5>
+                            hello@geeknomix.com
+                        </h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
 
     <script src="https://kit.fontawesome.com/991523486e.js" crossorigin="anonymous"></script>
     <script>
+
+        function navToggle() {
+            var nav = document.getElementById('nav');
+            let hamBurger = document.getElementById('hamBurger');
+            nav.classList.toggle("active")
+            hamBurger.classList.toggle("active")
+        }
+
+        function showSubMenu() {
+            var subMenu = document.getElementById('subMenu');
+            subMenu.classList.add("active")
+        }
+
+        // Function to hide the submenu
+        function hideSubMenu() {
+            var subMenu = document.getElementById('subMenu');
+            subMenu.classList.remove("active")
+        }
+
         window.addEventListener("scroll", function () {
             var scroll = window.scrollY || document.documentElement.scrollTop;
 

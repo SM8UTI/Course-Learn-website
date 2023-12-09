@@ -262,6 +262,78 @@ header nav ul li a {
 header nav ul li a:hover {
   color: var(--blue-600);
 }
+header .subMenu {
+  position: absolute;
+  left: -400px;
+  top: 1.8rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 1.8rem;
+  border-radius: 0.5rem;
+  display: none;
+  width: 850px;
+}
+header .subMenu .container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 600px;
+}
+header .subMenu .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+header .subMenu .container .left ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+header .subMenu .container .left ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: var(--blue-50);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+header .subMenu .container .left ul li a {
+  color: var(--black);
+}
+header .subMenu .container .left ul li .image {
+  width: 200px;
+  height: 100px;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+header .subMenu .container .left ul li .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+header .subMenu .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 1px solid #eaeaea;
+  padding-left: 2rem;
+}
+header .subMenu .container .right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  white-space: nowrap;
+  align-items: flex-start;
+}
+header .subMenu .container .right ul li a {
+  text-align: left;
+}
+header .subMenu.active {
+  display: flex;
+}
 
 .sticky-header.sticky {
   background-color: #fff;
@@ -269,8 +341,45 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 1000px) {
+  header .Wrapper .nav {
+    translate: 0 -200%;
+    transition: all 0.3s ease-in-out;
+  }
+  header .Wrapper .nav.active {
+    translate: 0 0% !important;
+  }
   header .Wrapper nav {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 6rem;
+    left: 0;
+    padding: 2rem;
+  }
+  header .Wrapper nav .subMenu {
+    width: 100%;
+    width: 400px;
+    left: -200% !important;
+  }
+  header .Wrapper nav .subMenu .container {
+    flex-direction: column;
+  }
+  header .Wrapper nav .subMenu .container .left {
     display: none !important;
+  }
+  header .Wrapper nav .subMenu .container .right {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  header .Wrapper nav .subMenu .container .right h4 {
+    display: none;
+  }
+  header .Wrapper nav ul {
+    flex-direction: column;
+  }
+  header .Wrapper nav ul li a {
+    font-size: var(--fs-21);
   }
 }
 @media (max-width: 768px) {
@@ -357,12 +466,17 @@ header nav ul li a:hover {
 .topCategories {
   background-color: var(--blue-50);
   margin-top: 6rem;
-  background: repeating-radial-gradient(circle, transparent, transparent 6.3px, #fff 0, #fff 8.1px), repeating-radial-gradient(circle, transparent, transparent 6.3px, #fff7d3 0, #fff7d3 8.1px), #fff;
-  background-color: #fff;
-  background-position: 0 0, 18px 18px, 36px 18px;
-  background-size: 36px 36px;
+  background: radial-gradient(50% 50% at 100% 0, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50% at 0 100%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%) 24px 24px;
+  background-color: #000;
+  background-size: 48px 48px;
   padding: 3rem 0;
   padding-bottom: 6rem;
+}
+.topCategories .heading h2 {
+  color: #fff !important;
+}
+.topCategories .container .item a {
+  color: #fff;
 }
 .topCategories .container {
   margin-top: 2rem;
@@ -867,7 +981,7 @@ section .heading h2 span {
 }
 .coursesLists .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -875,7 +989,7 @@ section .heading h2 span {
   .coursesLists .container {
     grid-template-columns: 1fr 1fr;
   }
-  .coursesLists .container .CourseCard:nth-child(3) {
+  .coursesLists .container .CourseCard:nth-child(3), .coursesLists .container .CourseCard:nth-child(4) {
     display: none !important;
   }
 }
@@ -900,9 +1014,20 @@ section .heading h2 span {
   height: 100%;
   overflow: hidden;
 }
+.CourseCard .table {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  border-radius: 0.25rem border;
+}
+.CourseCard .table li {
+  border: 1px solid #eaeaea;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--blue-50);
+}
 .CourseCard .image {
   width: 100%;
-  height: 200px;
+  height: 120px;
 }
 .CourseCard .image img {
   width: 100%;
@@ -920,7 +1045,7 @@ section .heading h2 span {
   gap: 1rem;
 }
 .CourseCard .text h4 {
-  font-size: var(--fs-18) !important;
+  font-size: var(--fs-16) !important;
   font-weight: 700 !important;
   text-transform: capitalize;
 }
@@ -928,7 +1053,7 @@ section .heading h2 span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.2rem;
 }
 .CourseCard .text ul li {
   display: flex;
@@ -937,8 +1062,11 @@ section .heading h2 span {
   gap: 0.5rem;
   padding-right: 0.5rem;
 }
+.CourseCard .text ul li span {
+  font-size: 0.9rem;
+}
 .CourseCard .text ul li .ico {
-  width: 40px;
+  width: 30px;
   aspect-ratio: 1;
 }
 .CourseCard .text ul li .ico img {
@@ -973,13 +1101,13 @@ section .heading h2 span {
   align-items: center;
   gap: 8px;
   justify-content: center;
-  padding: 0.4rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 0.4rem;
   white-space: nowrap;
-  font-size: var(--fs-14) !important;
+  font-size: 0.75rem !important;
 }
 .CourseCard .footer .btns-groups a .ico {
-  font-size: var(--fs-18);
+  font-size: var(--fs-14);
 }
 .CourseCard .footer .btns-groups .primaryBtn {
   display: flex;
@@ -998,6 +1126,11 @@ section .heading h2 span {
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
+  flex-wrap: wrap;
+}
+.CourseCard .footer .price .price-discount h2 {
+  white-space: nowrap;
+  font-size: var(--fs-24) !important;
 }
 .CourseCard .footer .price .price-discount span {
   font-size: var(--fs-15);
@@ -1455,6 +1588,9 @@ section .heading h2 span {
 
 .syllabusContainer {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .syllabusContainer-item {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -1480,6 +1616,7 @@ section .heading h2 span {
   gap: 2rem;
   justify-content: space-between;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .syllabusContainer-item .trigger {
@@ -1543,9 +1680,12 @@ section .heading h2 span {
 }
 .syllabusContainer-item .bodyContent {
   padding: 1rem;
-  display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  display: none;
 }
 .syllabusContainer-item .bodyContent-item {
   background-color: var(--blue-50);
@@ -1610,6 +1750,16 @@ section .heading h2 span {
   border-radius: 3rem;
 }
 
+.syllabusContainer-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.syllabusContainer-item.show .bodyContent {
+  display: flex;
+  height: -moz-max-content;
+  height: max-content;
+}
+
 .courseDetails-table {
   margin-top: 4rem;
 }
@@ -1642,7 +1792,7 @@ section .heading h2 span {
   padding: 1rem;
 }
 .courseDetails-table .container table td {
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 .courseDetails-table .container table tr:nth-child(01) {
   background-color: var(--blue-300) !important;
